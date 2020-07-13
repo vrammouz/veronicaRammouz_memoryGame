@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/main">
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/back_to_main"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24sp"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:background="#fff"
+        android:onClick="back2Main"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/user_name"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/difficulty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/teal"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/difficulty"/>
+
+        <TextView
+            android:id="@+id/set_difficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/teal"
+            android:layout_marginTop="24dp"
+            android:text="@string/set_phone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:text="@string/app_name"
+            android:textSize="32sp"
+            android:layout_marginStart="76sp"
+            android:layout_marginBottom="72sp"
+            android:layout_marginTop="32sp" />
+
+        <Button
+            android:id="@+id/main_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="32sp"
+            android:text="@string/start_button"
+            android:onClick="startGame"
+            android:background="#fff"
+            android:layout_marginBottom="8sp" />
+
+        <Button
+            android:id="@+id/main_difficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="@color/colorAccent"
+            android:text="@string/difficulty_button"
+            android:onClick="set"
+            android:background="#fff"
+            android:layout_marginBottom="8sp"/>
+
+        <Button
+            android:id="@+id/main_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="@color/colorAccent"
+            android:text="@string/help_button"
+            android:onClick="help"
+            android:background="#fff"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64sp"
+            android:layout_marginStart="32sp"
+            android:textColor="@color/teal"
+            android:text="@string/help_title"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40sp"
+            android:layout_marginStart="32sp"
+            android:layout_marginEnd="32sp"
+            android:text="@string/instructions"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/difficulty_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="@color/teal"
+            android:text="@string/please_select"
+            android:layout_marginTop="76sp"
+            android:layout_marginStart="12sp"
+            android:layout_marginBottom="64sp"/>
+
+        <Button
+            android:id="@+id/easy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/colorAccent"
+            android:text="@string/set_phone"
+            android:background="#fff"
+            android:onClick="changeDifficulty"
+            android:tag="1"
+            android:layout_marginTop="8sp"/>
+
+        <Button
+            android:id="@+id/hard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/colorAccent"
+            android:text="@string/set_license"
+            android:background="#fff"
+            android:layout_marginTop="8sp"
+            android:onClick="changeDifficulty"
+            android:tag="2"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/correct_guesses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="12dp"/>
+
+    <LinearLayout
+        android:id="@+id/guess_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/memo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/memo_text"
+            android:layout_marginTop="64dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/teal"
+            android:textSize="32sp"/>
+
+        <TextView
+            android:id="@+id/set_phone_number"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="32sp"
+            android:layout_marginTop="40sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginStart="40sp"
+            android:tag="1"/>
+
+        <TextView
+            android:id="@+id/set_license_plate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:layout_marginTop="40sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginStart="40sp"
+            android:tag="2"/>
+
+        <EditText
+            android:id="@+id/guess_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:layout_marginStart="40sp"
+            android:layout_marginTop="64dp"
+            android:hint="@string/guess_hint"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/ready_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/go"
+            android:textColor="@color/colorAccent"
+            android:background="#fff"
+            android:layout_marginTop="64sp"
+            android:textSize="24sp"
+            android:onClick="go"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="64sp"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:text="@string/win_game"
+        android:background="@color/teal"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/lose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="64sp"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:text="@string/lose_game"
+        android:background="@color/teal"/>
+
+</RelativeLayout>

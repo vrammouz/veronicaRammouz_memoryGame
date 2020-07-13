@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Memory Game</string>
+    <string name="user_name">Veronica Rammouz 20161609</string>
+    <string name="start_button">Start</string>
+    <string name="difficulty_button">Settings</string>
+    <string name="help_button">Help</string>
+    <string name="help_title">Instructions</string>
+    <string name="please_select">Please select a difficulty</string>
+    <string name="area_code">+961</string>
+    <string name="instructions">"Two modes. One for amateurs, and one for amateurs. The descriptions are in the settings; the buttons speak for themselves, as well as the app name does; but beware: one wrong guess will grant you every millennial's worst nightmare: being insulted. Have fun!</string>
+    <string name="back_to_main">Back to main menu</string>
+    <string name="difficulty">Difficulty: </string>
+    <string name="set_phone">Phone Numbers (Easy)</string>
+    <string name="set_license">License Plates (Hard)</string>
+    <string name="memo_text">Memorize the following</string>
+    <string name="go">Ready to go</string>
+    <string name="guess">Guess</string>
+    <string name="guess_hint">guess the sequence</string>
+    <string name="win_game">You have failed to disappoint yourself!</string>
+    <string name="lose_game">You are a disgrace to the human capacity</string>
+    <string name="score">Score:</string>
+    <string name="mistakes">Mistakes Remaining:</string>
+</resources>
